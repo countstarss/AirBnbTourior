@@ -76,7 +76,7 @@ struct ListingDetailView: View {
                 }
                 
                 Divider()
-                
+           
                 //part 2
                 HStack{
                     VStack(alignment:.leading,spacing:7){

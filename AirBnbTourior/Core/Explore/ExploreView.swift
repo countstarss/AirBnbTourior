@@ -15,25 +15,27 @@ struct ExploreView: View {
                 SearchAndFilterBar()
                 
                 LazyVStack(spacing:30){
-                    ForEach(0 ... 10,id:\.self) { listing in
+                    ForEach(0 ... 10,id: \.self) { listing in
+                        NavigationLink(value: listing){
                         ListingItemView()
                             .frame(height: 330)
                             .clipShape(RoundedRectangle(cornerRadius: 15))
                         
                     }
+                    }.padding()
+                    
+                }
+                .navigationDestination(for: Int.self) { listing in
+                    ListingDetailView()
+                        .navigationBarBackButtonHidden()
                 }
                 
             }
-            
         }
-        .navigationDestination(for: Int.self) { listing in
-            ListingDetailView()
-                .navigationBarBackButtonHidden()
-        }
-        
     }
 }
 
 #Preview {
     ExploreView()
 }
+
