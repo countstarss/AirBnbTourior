@@ -1,8 +1,3 @@
 # AirBnbTourior
 code practice
-
-
-
-modify
-
-One more
+This is a simple project that simulates the AirBnb app interface
